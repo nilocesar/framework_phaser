@@ -1,0 +1,13 @@
+form.form-horizontal.save-as(onsubmit="return false;")
+  .form-group.row
+    label.col-sm-3.control-label(for='filename') Filename
+    .col-sm-9
+      input.form-control(name="filename", value=levelName)
+  .form-group.row
+    label.col-sm-3.control-label(for='width') Width (px)
+    .col-sm-9
+      input.form-control(name="width", value="720")
+  .form-group.row
+    label.col-sm-3.control-label(for='height') Height (px)
+    .col-sm-9
+      input.form-control(name="height", value="480")

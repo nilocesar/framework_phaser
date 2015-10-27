@@ -1,0 +1,26 @@
+form.group-property-form(role="form", onsubmit="return false;")
+
+  .form-horizontal
+    .form-group
+      label.col-sm-3.control-label(for='name') Name
+      .col-sm-9
+        input.form-control(value=name, placeholder='Name', name="name")
+
+  .accordion
+    h2 Custom Properties
+    div
+      .form-inline.property-container
+
+        each value, key in group
+          include entity-option
+
+      button.add.btn.btn-default.add-property
+
+    h2 Collisions
+    div
+      .collision-container
+        each group in otherGroups
+          include group-collision
+
+a(id="delete-group", href="")
+  img(src="images/delete-icon.png", width="30px", height="35px")

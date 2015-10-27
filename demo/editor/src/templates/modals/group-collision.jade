@@ -1,0 +1,28 @@
+.collision-item(class="js-" + group.name)
+
+  .checkbox
+    label
+      input(type="checkbox", value=group.name)
+      |  #{group.name}
+
+  .collision-item-inputs
+
+    label.radio-inline
+      input.collide(type="radio", name="[#{group.name}]collision-type", value="collide")
+      | Collide
+
+    label.radio-inline
+      input.overlap(type="radio", name="[#{group.name}]collision-type", value="overlap")
+      | Overlap
+
+    .form-horizontal
+
+      .form-group
+        label.col-sm-3 Collision Callback
+        .col-sm-9
+          input.js-callback.stub.form-control(name="action-callback")
+
+      .form-group
+        label.col-sm-3 Process Callback
+        .col-sm-9
+          input.js-callback.stub.form-control(name="process-callback")
